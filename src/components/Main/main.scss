@@ -1,0 +1,18 @@
+.main {
+  &__container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__menu-container {
+    width: var(--MENU_WIDTH);
+    height: 100%;
+  }
+
+  &__content-container {
+    width: var(--CONTENT_WIDTH);
+  }
+}

@@ -1,3 +1,5 @@
+@import "react-datepicker/dist/react-datepicker.css";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,6 +15,7 @@ code {
 }
 
 :root {
+  /* colors */
   --MAIN_RED: #E32112;
   --MAIN_ORANGE: #ED7817;
   --MAIN_YELLOW: #FAB82E;
@@ -22,17 +25,93 @@ code {
   --MAIN_BLACK_60: rgba(0, 0, 0, 0.6);
   --MAIN_BLACK_40: rgba(0, 0, 0, 0.4);
   --MAIN_BLACK_20: rgba(0, 0, 0, 0.2);
+  --MAIN_BLACK_5: rgba(0, 0, 0, 0.05);
+
+  /* width */
+  --MENU_WIDTH: 15%;
+  --CONTENT_WIDTH: 85%;
+
+  /* height */
+  --BTN_HEIGHT: 38px;
+  --INPUT_HEIGHT: 38px;
+
+  /* size */
 }
 
 /* merely removed unnecessary react-bootstrap lib's styles */
+.form-control,
+.input-group {
+  margin: 0 !important;
+}
 .form-control:focus {
   border-color: var(--MAIN_ORANGE) !important;
   box-shadow: none !important;
 }
 
-.btn:focus {
-  border-color: var(--MAIN_ORANGE) !important;
+.btn {
+  margin: 0 !important;
+  border-color: var(--MAIN_BLACK_20) !important;
+  color: var(--MAIN_BLACK_80) !important;
   box-shadow: none !important;
-  background-color: var(--MAIN_WHITE) !important;
-  color: var(--MAIN_BLACK_80);
+  background: var(--MAIN_WHITE) !important;
+  height: var(--BTN_HEIGHT) !important;
+  //width: fit-content;
+  &:hover {
+    background: var(--MAIN_BLACK_5) !important;
+    border-color: var(--MAIN_BLACK_20) !important;
+  }
+  &:focus {
+    background: var(--MAIN_BLACK_5) !important;
+    background-color: var(--MAIN_WHITE) !important;
+  }
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  height: var(--INPUT_HEIGHT) !important;
+}
+
+.react-datepicker-wrapper {
+  border-color: var(--MAIN_BLACK_20) !important;
+}
+
+.agreements-filter__agreement-date:focus,
+.agreements-filter__agreement-date:focus-visible
+{
+  border-color: var(--MAIN_ORANGE) !important;
+}
+
+.selection-cell input {
+  background-color: var(--MAIN_ORANGE) !important;
+  background: var(--MAIN_ORANGE) !important;
+
+}
+
+input[type='radio']:after {
+  width: 17px;
+  height: 17px;
+  border-radius: 15px;
+  top:-3px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 17px;
+  height: 17px;
+  //border-radius: 15px;
+  top: -3px;
+  left: -1px;
+  position: relative;
+  background-color: #ffa500;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }

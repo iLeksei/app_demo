@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --MAIN_RED: #E32112;
+  --MAIN_ORANGE: #ED7817;
+  --MAIN_YELLOW: #FAB82E;
+  --MAIN_GREEN: #16A851;
+  --MAIN_WHITE: #FFFFFF;
+  --MAIN_BLACK_80: rgba(0, 0, 0, 0.8);
+  --MAIN_BLACK_60: rgba(0, 0, 0, 0.6);
+  --MAIN_BLACK_40: rgba(0, 0, 0, 0.4);
+  --MAIN_BLACK_20: rgba(0, 0, 0, 0.2);
+}
+
+/* merely removed unnecessary react-bootstrap lib's styles */
+.form-control:focus {
+  border-color: var(--MAIN_ORANGE) !important;
+  box-shadow: none !important;
+}
+
+.btn:focus {
+  border-color: var(--MAIN_ORANGE) !important;
+  box-shadow: none !important;
+  background-color: var(--MAIN_WHITE) !important;
+  color: var(--MAIN_BLACK_80);
+}

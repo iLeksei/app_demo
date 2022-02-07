@@ -29,6 +29,7 @@
 .menu__accordion-menu_el {
     width: inherit;
     border: none;
+    padding-top: 5px;
 }
 
 .accordion-button::after,

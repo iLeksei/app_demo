@@ -41,10 +41,6 @@ export const Menu = (props: IProps): ReactElement => {
 
     return (
         <Nav className="menu__container">
-            <div className="menu__logo">
-                <img alt="logo" src={evrazLogo}/>
-                <div className="menu__logo-gradient"></div>
-            </div>
             <Accordion defaultActiveKey="0" alwaysOpen className="menu__accordion-menu_el">
                 <AccordionToggler text={"CЭД"} eventKey="0"/>
                 <Accordion.Collapse eventKey="0"><>{renderMenu(sedMenu)}</></Accordion.Collapse>

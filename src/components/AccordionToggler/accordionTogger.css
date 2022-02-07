@@ -12,6 +12,10 @@
     transform: rotate(180deg);
 }
 
+.accordion-toggler__text {
+    color: rgba(0, 0, 0, 0.8)
+}
+
 .accordion-toggler__container:hover {
     cursor: pointer;
 }

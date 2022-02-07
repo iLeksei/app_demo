@@ -1,3 +1,4 @@
+npm install         - for installation all dependencies (check notes below)
 npm run start       - to start app at dev mode
 npm run:stub        - to start up the stub server
 

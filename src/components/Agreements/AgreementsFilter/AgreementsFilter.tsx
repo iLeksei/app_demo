@@ -22,13 +22,13 @@ export const AgreementsFilter = (props: IProps): ReactElement => {
 
     return (
         <Form className="agreements-filter__container">
-            <Button
-                id="to-process-btn"
-                className="agreements-filter__to-process-btn agreements-filter__filter-element"
-                onClick={toProcess}
-            >
-                К действию
-            </Button>
+            {/*<Button*/}
+            {/*    id="to-process-btn"*/}
+            {/*    className="agreements-filter__to-process-btn agreements-filter__filter-element"*/}
+            {/*    onClick={toProcess}*/}
+            {/*>*/}
+            {/*    К действию*/}
+            {/*</Button>*/}
             <FormControl
                 id="agreement-name"
                 name="agreement_name"
@@ -38,16 +38,16 @@ export const AgreementsFilter = (props: IProps): ReactElement => {
                 //@ts-ignore
                 onChange={onFilterChange}
             />
-            <DatePicker
-                id="agreement-date"
-                name="agreement_date"
-                className="agreements-filter__agreement-date agreements-filter__filter-element"
-                timeInputLabel="Time:"
-                dateFormat="MM/dd/yyyy h:mm aa"
-                showTimeInput
-                selected={props.data?.docsDate || null}
-                onChange={onFilterChange}
-            />
+            {/*<CustomizedDatepicker*/}
+            {/*    id="agreement-date"*/}
+            {/*    name="agreement_date"*/}
+            {/*    className="agreements-filter__agreement-date agreements-filter__filter-element"*/}
+            {/*    timeInputLabel="Time:"*/}
+            {/*    dateFormat="MM/dd/yyyy h:mm aa"*/}
+            {/*    showTimeInput*/}
+            {/*    selected={props.data?.docsDate || null}*/}
+            {/*    onChange={onFilterChange}*/}
+            {/*/>*/}
             <FormControl
                 id="agreement-author"
                 name="agreement_author"

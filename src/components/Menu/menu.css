@@ -41,3 +41,11 @@
     color: black !important;
 }
 
+.menu__element {
+    width: 100%;
+    color: var(--MAIN_BLACK_80) !important;
+}
+
+.menu__element[disabled] {
+    color: var(--MAIN_BLACK_20) !important;
+}

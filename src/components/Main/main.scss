@@ -9,10 +9,12 @@
   }
   &__menu-container {
     width: var(--MENU_WIDTH);
+    min-width: var(--MENU_MIN_WIDTH);
     height: 100%;
   }
 
   &__content-container {
     width: var(--CONTENT_WIDTH);
+    height: 100%;
   }
 }

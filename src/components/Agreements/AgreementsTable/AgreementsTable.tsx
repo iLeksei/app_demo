@@ -20,16 +20,23 @@ const columns = [
     },
     {
         dataField: 'agreementNum',
-        text: 'Порядковый номер договора',
-        sort: true
+        text: '№',
+        sort: true,
+        align: 'center',
     },
     {
         dataField: 'agreementName',
-        text: 'Название договора'
+        text: 'Название договора',
+        style: {
+            fontSize: "12px",
+        }
     },
     {
         dataField: 'agreementAuthor',
-        text: 'Автор договора'
+        text: 'Автор договора',
+        style: {
+            fontSize: "12px",
+        }
     }
 ];
 
@@ -47,12 +54,13 @@ export const AgreementsTable = (props: IProps): ReactElement => {
         <div className="agreements__table-container">
             <BootstrapTable
                 keyField='agreementId'
+                rowClasses="agreements__table-row"
                 data={props.data || []}
                 columns={columns}
                 //@ts-ignore
                 selectRow={selectRow}
                 // striped
-                hover
+                // hover
                 condensed
             />
         </div>

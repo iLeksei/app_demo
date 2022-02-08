@@ -1,4 +1,5 @@
 import {Agreements} from "../entities/Agreements";
+import {CommonUtils} from "../utils/CommonUtils";
 
 export class AgreementController {
 
@@ -10,6 +11,10 @@ export class AgreementController {
         } catch (e) {
         }
         return Promise.resolve(null)
+    }
+
+    static getAgreementPreviewUrl = (agreementId?: string) => {
+        return CommonUtils.getDocsServiceHost() + `/Referent/br_dogovory.nsf/0/${agreementId}`;
     }
 
 }

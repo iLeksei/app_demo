@@ -26,10 +26,13 @@ code {
   --MAIN_BLACK_40: rgba(0, 0, 0, 0.4);
   --MAIN_BLACK_20: rgba(0, 0, 0, 0.2);
   --MAIN_BLACK_5: rgba(0, 0, 0, 0.05);
+  --MAIN_BLACK_2: rgba(0, 0, 0, 0.02);
 
   /* width */
   --MENU_WIDTH: 15%;
   --CONTENT_WIDTH: 85%;
+  --MENU_MIN_WIDTH: 165px;
+  --CONTENT_MIN_WIDTH: 454px;
 
   /* height */
   --BTN_HEIGHT: 38px;
@@ -41,7 +44,7 @@ code {
 /* merely removed unnecessary react-bootstrap lib's styles */
 .form-control,
 .input-group {
-  margin: 0 !important;
+  //margin: 0 !important;
 }
 .form-control:focus {
   border-color: var(--MAIN_ORANGE) !important;
@@ -114,4 +117,8 @@ input[type='radio']:checked:after {
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+}
+
+a.nav-link.active {
+  color: var(--MAIN_ORANGE) !important;
 }

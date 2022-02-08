@@ -22,8 +22,8 @@ export const Header = (props: IProps): ReactElement => {
     return (
         <header className="header__container">
             <div className="header__logo">
-                {/*<img alt="logo" src={evrazLogo} className="header__logo-img"/>*/}
-                {/*<div className="header__logo-gradient"></div>*/}
+                <img alt="logo" src={evrazLogo} className="header__logo-img"/>
+                <div className="header__logo-gradient"></div>
             </div>
             <Form className="header__form-container">
                 <InputGroup className="mb-3 header__docs-input">

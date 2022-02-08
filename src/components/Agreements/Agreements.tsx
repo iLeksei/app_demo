@@ -1,4 +1,4 @@
-import React, {ReactElement, useEffect, useState} from "react";
+import React, {ReactElement, useEffect, useRef, useState} from "react";
 
 import {AgreementController} from "../../controllers/AgreementController";
 import {AgreementsPreview} from "./AgreementsPreview/AgreementsPreview";
@@ -14,6 +14,7 @@ interface IProps {
 }
 
 export const Agreements = (props: IProps): ReactElement => {
+    const containerRef = useRef();
     const [agreements, setAgreements] = useState<AgreementTableRecord[] | null>(null);
     const [agreementsCount, setAgreementsCount] = useState<number>(0);
     const [filterData, setFilterData] = useState<any>({});
@@ -31,12 +32,10 @@ export const Agreements = (props: IProps): ReactElement => {
     }
 
     const onFilterChange = (name: string, value: any) => {
-        console.log(name, value);
         setFilterData( (data: any) => ({...data, name: value}));
     }
 
     const onAgreementSelect = (agreement: AgreementTableRecord) => {
-        console.log(agreement)
         setSelectedAgreement(agreement);
     }
 
@@ -46,7 +45,12 @@ export const Agreements = (props: IProps): ReactElement => {
                 <AgreementsFilter data={filterData} onChange={onFilterChange}/>
                 <AgreementsTable onSelect={onAgreementSelect} data={agreements} total={agreementsCount} />
             </div>
-            <AgreementsPreview src={""} agreement={selectedAgreement} />
+            <div className="agreements__preview-container">
+                <AgreementsPreview
+                    src={AgreementController.getAgreementPreviewUrl(selectedAgreement?.agreementId)}
+                    agreement={selectedAgreement}
+                />
+            </div>
         </div>
     )
 }

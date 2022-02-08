@@ -1,6 +1,7 @@
 .agreements {
-  &__contaner {
+  &__container {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -8,6 +9,19 @@
   }
 
   &__form-container {
+    width: 50%;
+    min-width: var(--CONTENT_MIN_WIDTH);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--MAIN_BLACK_5);
+  }
+
+  &__preview-container {
+    width: 50%;
+    min-width: var(--CONTENT_MIN_WIDTH);
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

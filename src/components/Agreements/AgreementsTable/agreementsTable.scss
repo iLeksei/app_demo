@@ -1,6 +1,17 @@
-.agreements__table-container {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.agreements {
+  &__table-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__table-row {
+
+    &:hover {
+      cursor: pointer;
+      background: var(--MAIN_BLACK_2);
+    }
+  }
+
 }

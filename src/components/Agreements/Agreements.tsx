@@ -31,7 +31,6 @@ export const Agreements = (props: IProps): ReactElement => {
     }
 
     const onFilterChange = (name: string, value: any) => {
-        console.log(name, value)
         setFilterData( (data: any) => ({...data, [name]: value}));
     }
 

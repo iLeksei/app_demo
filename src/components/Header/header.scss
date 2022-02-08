@@ -25,6 +25,10 @@
             padding: 15px 4px 4px 4px;
             width: 100%;
         }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__logo-gradient {
@@ -67,10 +71,10 @@
 }
 
 .input-group-text {
-    background: var(--MAIN_WHITE) !important;
-    border-left: none !important;
+    background: var(--MAIN_WHITE) !important; /* removed lib's style */
+    border-left: none !important; /* removed lib's style */
 }
 
 div.header__docs-input.input-group {
-    margin: 0 !important; /* removed lib's margin */
+    margin: 0 !important; /* removed lib's style */
 }

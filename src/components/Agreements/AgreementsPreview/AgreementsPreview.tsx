@@ -17,6 +17,7 @@ export const AgreementsPreview = (props: IProps): ReactElement => {
                 loading="lazy"
                 name="agreements-preview"
                 title="Просмотр договора"
+                scrolling="yes"
                 // src={"https://jsonplaceholder.typicode.com/"} //for test
                 src={props.src}
             />;
@@ -30,6 +31,17 @@ export const AgreementsPreview = (props: IProps): ReactElement => {
         )
     }
 
+    const renderAgreementInfo = (): ReactElement | string => {
+        const NO_AUTHOR_MSG: string = "Автор не найден";
+        return (
+            !!props.src && !!props.agreement?.agreementId ?
+            <>
+                <div>Название договора: {props.agreement?.agreementName}</div>
+                <div>Автор договора: {props.agreement?.agreementAuthor || NO_AUTHOR_MSG}</div>
+            </> : ""
+        )
+    }
+
     return (
         <section className="agreements-preview__container">
             <div className="agreements-preview__description">{renderPreviewDescription()}</div>
@@ -38,6 +50,7 @@ export const AgreementsPreview = (props: IProps): ReactElement => {
                     renderAgreement()
                 }
             </div>
+            <div className="agreements-preview__agreement-info">{renderAgreementInfo()}</div>
         </section>
     );
 }

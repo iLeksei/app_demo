@@ -18,6 +18,8 @@
     iframe {
       width: 90%;
       height: 100%;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
     }
   }
 
@@ -34,6 +36,12 @@
     //height: 100%;
     text-align: center;
     align-self: center;
+  }
+
+  &__agreement-info {
+    width: 90%;
+    height: auto;
+
   }
 
 }

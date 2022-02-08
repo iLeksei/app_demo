@@ -5,6 +5,7 @@ import DatePicker from "react-datepicker";
 import FormControl from "react-bootstrap/FormControl";
 
 import "./agreementsFilter.scss";
+import {StringUtils} from "../../../utils/StringUtils";
 
 
 interface IProps {
@@ -16,8 +17,9 @@ export const AgreementsFilter = (props: IProps): ReactElement => {
     const toProcess = () => {
     };
 
-    const onFilterChange = (a: any, b: SyntheticEvent) => {
-        console.log(a, b);
+    const onFilterChange = (e: any) => {
+        console.log(e);
+        props.onChange(e?.target?.name, StringUtils.sanitizeString(e?.target?.value || ""));
     }
 
     return (

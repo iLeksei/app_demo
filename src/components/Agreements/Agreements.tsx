@@ -14,7 +14,6 @@ interface IProps {
 }
 
 export const Agreements = (props: IProps): ReactElement => {
-    const containerRef = useRef();
     const [agreements, setAgreements] = useState<AgreementTableRecord[] | null>(null);
     const [agreementsCount, setAgreementsCount] = useState<number>(0);
     const [filterData, setFilterData] = useState<any>({});
@@ -32,7 +31,8 @@ export const Agreements = (props: IProps): ReactElement => {
     }
 
     const onFilterChange = (name: string, value: any) => {
-        setFilterData( (data: any) => ({...data, name: value}));
+        console.log(name, value)
+        setFilterData( (data: any) => ({...data, [name]: value}));
     }
 
     const onAgreementSelect = (agreement: AgreementTableRecord) => {

@@ -9,6 +9,7 @@ const api = express();
 api.use(bodyParser.json());
 api.use(bodyParser.urlencoded({extended: true}));
 
+// for cors
 api.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS, POST, PUT');
@@ -20,7 +21,7 @@ api.use((req, res, next) => {
 api.get("/health-check", (req, res) => {
     res.status(200).send("Alive");
 })
-api.use("/agreements", agreementRouter);
+api.use("/", agreementRouter);
 
 api.listen(DEFAULT_PORT, () => {
     console.log("Server has started on 1414 port!");

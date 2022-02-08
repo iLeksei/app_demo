@@ -3,9 +3,14 @@ import {CommonUtils} from "../utils/CommonUtils";
 
 export class AgreementController {
 
+    /**
+     * @param filterData - todo: make a flexible url, when filter with filterData will be realised
+     */
     static getAgreementsList = async (filterData: any): Promise<Agreements | null> => {
         try {
-            const response: Response = await fetch(`http://127.0.0.1:1414/agreements`); //todo past real url
+            const url: string = CommonUtils.getDocsServiceHost() +
+                "/referent/br_dogovory.nsf/AllDocuments?ReadViewEntries&Outputformat=JSON&count=15";
+            const response: Response = await fetch(`${url}`);
             const result =  await response.json();
             return result;
         } catch (e) {

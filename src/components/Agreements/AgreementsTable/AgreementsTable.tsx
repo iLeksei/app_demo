@@ -57,6 +57,7 @@ export const AgreementsTable = (props: IProps): ReactElement => {
                 rowClasses="agreements__table-row"
                 data={props.data || []}
                 columns={columns}
+                noDataIndication="No data"
                 //@ts-ignore
                 selectRow={selectRow}
                 // striped

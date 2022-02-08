@@ -4,8 +4,9 @@ npm run start       - to start app at dev mode\
 npm run:stub        - to start up the stub server\
 
 todos:
-1) bundle project with webpack
+1) to bundle project with webpack, mb an overall bundle weight could end up being reduced
 2) if you need checkbox with appropriate color schema, do a customized one
+3) to customize react datepicker
 
 
 notes:\

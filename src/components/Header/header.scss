@@ -56,17 +56,8 @@
     }
 
     &__find-btn {
-        margin: 0 !important;
-        border-color: var(--MAIN_BLACK_20) !important;
-        color: var(--MAIN_BLACK_80) !important;
-        background: var(--MAIN_WHITE) !important;
-        &:hover {
-            background: var(--MAIN_BLACK_5) !important;
-            border-color: var(--MAIN_BLACK_20) !important;
-        }
-        &:focus {
-            background: var(--MAIN_BLACK_5) !important;
-        }
+        margin: 0 !important; /* removed lib's style */
+        border-color: var(--MAIN_BLACK_20) !important; /* removed lib's style */
     }
 }
 

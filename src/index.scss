@@ -53,19 +53,17 @@ code {
 
 .btn {
   margin: 0 !important;
-  border-color: var(--MAIN_BLACK_20) !important;
-  color: var(--MAIN_BLACK_80) !important;
-  box-shadow: none !important;
-  background: var(--MAIN_WHITE) !important;
-  height: var(--BTN_HEIGHT) !important;
-  //width: fit-content;
-  &:hover {
-    background: var(--MAIN_BLACK_5) !important;
-    border-color: var(--MAIN_BLACK_20) !important;
-  }
+  border-color: var(--MAIN_BLACK_20) !important;  /* removed lib's style */
+  color: var(--MAIN_BLACK_80) !important;  /* removed lib's style */
+  box-shadow: none !important;  /* removed lib's style */
+  background: var(--MAIN_WHITE) !important;  /* removed lib's style */
+  height: var(--BTN_HEIGHT) !important;  /* removed lib's style */
   &:focus {
-    background: var(--MAIN_BLACK_5) !important;
-    background-color: var(--MAIN_WHITE) !important;
+    background: var(--MAIN_BLACK_5) !important;  /* removed lib's style */
+    background-color: var(--MAIN_WHITE) !important;  /* removed lib's style */
+  }
+  &:active {
+    border-color: var(--MAIN_ORANGE) !important;
   }
 }
 

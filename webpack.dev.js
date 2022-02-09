@@ -10,7 +10,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, 'dist'),
-        publicPath: path.join(__dirname, 'dist/'),
+        publicPath: path.join(''),
     },
     devtool: "inline-source-map",
     module: {
@@ -69,7 +69,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src", "template.html"),
             filename: "index.html",
-            // inject: "body",
+            inject: "body",
             cache: false,
         }),
         // new webpack.HotModuleReplacementPlugin(),

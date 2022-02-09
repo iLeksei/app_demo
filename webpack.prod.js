@@ -11,8 +11,8 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, 'build'),
-        publicPath: path.join(__dirname, "/"),
-    },
+        publicPath: path.join(''),
+},
     module: {
         rules: [
             {
@@ -64,7 +64,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src", "template.html"),
             filename: "index.html",
-            // inject: "body",
+            inject: "body",
             cache: false,
         }),
         // new CleanWebpackPlugin({

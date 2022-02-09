@@ -1,0 +1,49 @@
+.agreements-preview {
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    //padding-top: 80px;
+  }
+
+  &__frame-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    iframe {
+      width: 90%;
+      height: 100%;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  &__description {
+    width: 90%;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__warning {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    h3 {
+      color: var(--MAIN_BLACK_60)
+    }
+  }
+
+  &__agreement-info {
+    width: 90%;
+    height: auto;
+
+  }
+
+}

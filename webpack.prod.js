@@ -11,6 +11,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, 'build'),
+        publicPath: path.join(__dirname, "/"),
     },
     module: {
         rules: [
@@ -37,7 +38,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(jpg|jpeg|gif|png|svg)$/,
+                test: /\.(jpg|jpeg|gif)$/,
                 type: "asset/resource",
                 use: {
                     loader: 'file-loader',
@@ -46,6 +47,10 @@ module.exports = {
                     }
                 }
             },
+            {
+                test: /\.(svg|png)$/,
+                use: ["url-loader"]
+            }
         ],
     },
     resolve: {
@@ -59,7 +64,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src", "template.html"),
             filename: "index.html",
-            inject: "body",
+            // inject: "body",
             cache: false,
         }),
         // new CleanWebpackPlugin({

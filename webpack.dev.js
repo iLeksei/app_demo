@@ -9,8 +9,8 @@ module.exports = {
     entry: "./src/index.tsx",
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: path.resolve(__dirname, 'dist'),
+        path: path.join(__dirname, 'dist'),
+        publicPath: path.join(__dirname, 'dist/'),
     },
     devtool: "inline-source-map",
     module: {
@@ -43,7 +43,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(jpg|jpeg|gif|png|svg)$/,
+                test: /\.(jpg|jpeg|gif)$/,
                 type: "asset/resource",
                 use: {
                     loader: 'file-loader',
@@ -52,6 +52,10 @@ module.exports = {
                     }
                 }
             },
+            {
+                test: /\.(svg|png)$/,
+                use: ["url-loader"]
+            }
         ],
     },
     resolve: {
@@ -65,8 +69,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src", "template.html"),
             filename: "index.html",
-            title: "test webpack",
-            inject: "body",
+            // inject: "body",
             cache: false,
         }),
         // new webpack.HotModuleReplacementPlugin(),

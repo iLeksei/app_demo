@@ -1,0 +1,21 @@
+.accordion-toggler__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.accordion-toggler__icon {
+    width: 24px;
+    transform: rotate(180deg);
+}
+
+.accordion-toggler__text {
+    color: rgba(0, 0, 0, 0.8)
+}
+
+.accordion-toggler__container:hover {
+    cursor: pointer;
+}

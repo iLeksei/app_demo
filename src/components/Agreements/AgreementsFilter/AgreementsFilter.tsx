@@ -1,7 +1,5 @@
-import React, {ReactElement, SyntheticEvent} from "react";
+import React, {ReactElement} from "react";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import DatePicker from "react-datepicker";
 import FormControl from "react-bootstrap/FormControl";
 
 import "./agreementsFilter.scss";

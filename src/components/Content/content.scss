@@ -1,0 +1,13 @@
+.content__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 88%;
+  height: 100%;
+  //position: relative;
+  //left: 12%;
+  @media screen and (min-width: 1280px) {
+    width: 92%;
+  }
+}

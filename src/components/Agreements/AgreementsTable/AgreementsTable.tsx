@@ -1,4 +1,5 @@
 import React, {ReactElement} from "react";
+// @ts-ignore
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import BootstrapTable from "react-bootstrap-table-next";
 
@@ -6,13 +7,13 @@ import {Agreements} from "../../../entities/Agreements";
 import {AgreementTableRecord} from "../../../entities/AgreementTableRecord";
 
 import "./agreementsTable.scss"
+// import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 interface IProps {
     data: AgreementTableRecord[] | null;
     total: number;
     onSelect?: (record: AgreementTableRecord) => void;
 }
-
 const columns = [
     {
         dataField: 'agreementId',
@@ -29,6 +30,7 @@ const columns = [
     {
         dataField: 'agreementName',
         text: 'Название договора',
+        sort: true,
         style: {
             fontSize: "12px",
         }
@@ -36,6 +38,7 @@ const columns = [
     {
         dataField: 'agreementAuthor',
         text: 'Автор договора',
+        sort: true,
         style: {
             fontSize: "12px",
         }
@@ -47,12 +50,14 @@ export const AgreementsTable = (props: IProps): ReactElement => {
 
     const selectRow = {
         mode: 'radio',
+        classes: 'agreements__selected-row',
+        hideSelectColumn: true,
         clickToSelect: true,
         onSelect: props.onSelect,
     };
 
     const paginationConfig = {
-        sizePerPage: 5,
+        sizePerPage: 15,
         hideSizePerPage: true,
         hidePageListOnlyOnePage: true,
         totalSize: props.total,

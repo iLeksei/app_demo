@@ -221,9 +221,9 @@ var AccordionToggler = function AccordionToggler(_ref) {
     style: style
   }));
 };
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Menu/menu.css
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Menu/menu.scss
 var menu = __webpack_require__(1974);
-;// CONCATENATED MODULE: ./src/components/Menu/menu.css
+;// CONCATENATED MODULE: ./src/components/Menu/menu.scss
 
       
       

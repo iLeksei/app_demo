@@ -25,10 +25,6 @@ export const Header = (props: IProps): ReactElement => {
 
     return (
         <header className="header__container">
-            <Link to={"/"} className="header__logo">
-                <img alt="logo" src={evrazLogo} className="header__logo-img"/>
-                <div className="header__logo-gradient"/>
-            </Link>
             <Form className="header__form-container">
                 <InputGroup className="mb-3 header__docs-input">
                     <FormControl
@@ -40,6 +36,7 @@ export const Header = (props: IProps): ReactElement => {
                         aria-label="Search documents input"
                     />
                     <InputGroup.Text>
+                        {/*@ts-ignore*/}
                         <img src={searchIcon} alt="search-icon" className="header__find-docs-icon"/>
                     </InputGroup.Text>
                 </InputGroup>

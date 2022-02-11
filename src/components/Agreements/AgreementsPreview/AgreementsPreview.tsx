@@ -1,4 +1,4 @@
-import React, {ReactElement } from "react";
+import React, {ReactElement, useEffect, useRef} from "react";
 import {AgreementTableRecord} from "../../../entities/AgreementTableRecord";
 
 import "./agreementsPreview.scss"
@@ -9,6 +9,17 @@ interface IProps {
 }
 
 export const AgreementsPreview = (props: IProps): ReactElement => {
+    const previewContainer = useRef();
+
+    useEffect(() => {
+        document.addEventListener("resize", onResize)
+
+        return document.removeEventListener("resize", onResize);
+    }, [])
+
+    const onResize = (e: any) => {
+        console.log(e);
+    }
 
     const renderAgreement = () => {
         return !!props.src && !!props.agreement?.agreementId &&
@@ -18,8 +29,8 @@ export const AgreementsPreview = (props: IProps): ReactElement => {
                 name="agreements-preview"
                 title="Просмотр договора"
                 scrolling="yes"
-                // src={"https://jsonplaceholder.typicode.com/"} //for test
-                src={props.src}
+                src={"https://jsonplaceholder.typicode.com/"} //for test
+                // src={props.src}
             />;
     }
 
@@ -43,7 +54,7 @@ export const AgreementsPreview = (props: IProps): ReactElement => {
     }
 
     return (
-        <section className="agreements-preview__container">
+        <section className="agreements-preview__wrapper">
             <div className="agreements-preview__description">{renderPreviewDescription()}</div>
             <div className="agreements-preview__frame-container">
                 {

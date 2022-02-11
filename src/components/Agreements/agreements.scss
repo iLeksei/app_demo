@@ -17,6 +17,10 @@
     justify-content: flex-start;
     align-items: center;
     border-right: 1px solid var(--MAIN_BLACK_5);
+    //overflow-x: auto;
+    @media screen and (min-width: 1700px) {
+      width: 35%;
+    }
   }
 
   &__preview-container {
@@ -25,7 +29,13 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: stretch;
+    align-items: stretch;
+    @media screen and (min-width: 1700px) {
+      width: 65%;
+    }
   }
+
+
 }
+

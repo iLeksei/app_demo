@@ -1,6 +1,6 @@
 .agreements {
   &__table-container {
-    width: 90%;
+    width: 96%;
     display: flex;
     flex-direction: column;
     flex-flow: column-reverse;
@@ -18,6 +18,10 @@
       cursor: pointer;
       background: var(--MAIN_BLACK_2);
     }
+  }
+
+  &__selected-row {
+    background: var(--MAIN_BLACK_5);
   }
 
 }

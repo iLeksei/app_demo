@@ -1,6 +1,5 @@
 import {Agreements} from "../entities/Agreements";
 import {AgreementTableRecord} from "../entities/AgreementTableRecord";
-import {EntryData} from "../entities/EntryData";
 
 export class AgreementUtils {
 
@@ -30,6 +29,25 @@ export class AgreementUtils {
             return agreementRecord;
         })
         return result;
+    }
+
+    static filterAgreements = (agreements: AgreementTableRecord[] | null, filterData: any): AgreementTableRecord[] => {
+        if (!agreements) { return [] }
+        if (!filterData?.agreement_name && !filterData?.agreement_author) { return [] }
+        return agreements.filter( agreement => {
+            if (filterData?.agreement_name && filterData?.agreement_author) {
+                return agreement?.agreementName?.toLocaleLowerCase()
+                        ?.includes(filterData.agreement_name.toLocaleLowerCase()) ||
+                    agreement?.agreementAuthor?.toLocaleLowerCase()
+                        ?.includes(filterData.agreement_author.toLocaleLowerCase());
+            } else if (filterData?.agreement_name) {
+                return agreement?.agreementName?.toLocaleLowerCase()
+                        ?.includes(filterData.agreement_name.toLocaleLowerCase());
+            } else if (filterData?.agreement_author) {
+                agreement?.agreementAuthor?.toLocaleLowerCase()
+                    ?.includes(filterData.agreement_author.toLocaleLowerCase());
+            }
+        })
     }
 
 }

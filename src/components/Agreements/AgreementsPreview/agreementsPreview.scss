@@ -1,12 +1,12 @@
 .agreements-preview {
-  &__container {
+  &__wrapper {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    //padding-top: 80px;
+    padding-top: 80px;
   }
 
   &__frame-container {
@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     iframe {
-      width: 90%;
+      width: 96%;
       height: 100%;
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
@@ -43,7 +43,6 @@
   &__agreement-info {
     width: 90%;
     height: auto;
-
   }
 
 }

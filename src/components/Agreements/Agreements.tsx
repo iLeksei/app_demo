@@ -1,10 +1,11 @@
 import React, {ReactElement, useEffect, useRef, useState} from "react";
+import Splitter, {SplitDirection} from "@devbookhq/splitter";
 
 import {AgreementController} from "../../controllers/AgreementController";
 import {AgreementsPreview} from "./AgreementsPreview/AgreementsPreview";
 import {AgreementsFilter} from "./AgreementsFilter/AgreementsFilter";
 import {AgreementsTable} from "./AgreementsTable/AgreementsTable";
-import {Agreements as AgreementsEntity } from "../../entities/Agreements";
+import {Agreements as AgreementsEntity} from "../../entities/Agreements";
 import {AgreementUtils} from "../../utils/AgreementUtils";
 import {AgreementTableRecord} from "../../entities/AgreementTableRecord";
 
@@ -37,12 +38,17 @@ export const Agreements = (props: IProps): ReactElement => {
     const onAgreementSelect = (agreement: AgreementTableRecord) => {
         setSelectedAgreement(agreement);
     }
-
     return (
         <div className="agreements__container">
             <div className="agreements__form-container">
                 <AgreementsFilter data={filterData} onChange={onFilterChange}/>
-                <AgreementsTable onSelect={onAgreementSelect} data={agreements} total={agreementsCount} />
+                <AgreementsTable
+                    onSelect={onAgreementSelect}
+                    data={agreements}
+                    // data={AgreementUtils.filterAgreements(agreements, filterData)}
+                    total={agreementsCount}
+
+                />
             </div>
             <div className="agreements__preview-container">
                 <AgreementsPreview

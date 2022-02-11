@@ -1,23 +1,21 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 
-import { Header } from './components/Header/Header';
-import {Main} from "./components/Main/Main";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+
 import './App.scss';
+import {Menu} from "./components/Menu/Menu";
+import {Content} from "./components/Content/Content";
 
 
 function App() {
     return (
         <BrowserRouter>
-            <div className="app__container">
-                <div className="app__header-container">
-                    <Header/>
-                </div>
-                <div className="app__nav_content-container">
-                    <Main/>
-                </div>
+            <div className="app__container" id="outer-container">
+                <Menu />
+                <Content/>
             </div>
         </BrowserRouter>
     );

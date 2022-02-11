@@ -1,11 +1,11 @@
 .main {
   &__container {
-    width: inherit;
     height: inherit;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
   }
   &__menu-container {
     width: var(--MENU_WIDTH);

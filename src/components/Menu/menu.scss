@@ -1,0 +1,80 @@
+.menu {
+  &__container {
+    height: 100%;
+    width: 12%;
+    min-width: 80px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*background: #367b81;*/
+    //padding-left: 5px;
+    border-right: 1px solid var(--MAIN_BLACK_5);
+    margin: 0;
+    padding-left: 0;
+    position: relative;
+    //top: 0;
+    //bottom: 0;
+    //-webkit-transition: left 0.3s;
+    //-moz-transition: left 0.3s;
+    //transition: left 0.3s;
+    //z-index: 2000;
+    //left: -12%;
+    @media screen and (min-width: 1280px) {
+      width: 8%;
+    }
+  }
+
+  &__logo-container {
+    //background: var(--MAIN_BLACK_20);
+    height: 10%;
+    min-height: 80px;
+    //min-width: var(--MENU_MIN_WIDTH);
+    //border-right: 1px solid var(--MAIN_BLACK_5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      padding: 15px 4px 4px 4px;
+      width: 100%;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__logo-gradient {
+    background: rgb(242, 215, 94);
+    background: linear-gradient(90deg, rgba(242, 215, 94, 1) 0%, rgba(198, 161, 29, 1) 55%, rgba(237, 62, 62, 1) 100%);
+    height: 3px;
+    width: 100%;
+  }
+
+  &__nav-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__accordion-menu_el {
+    border: none;
+    padding-top: 5px;
+  }
+}
+
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after,
+.accordion-button:not(.collapsed) {
+  color: black !important; /* removed lib's style */
+}
+
+.menu__element {
+  width: 100%;
+  color: var(--MAIN_BLACK_80) !important; /* removed lib's style */
+}
+
+.menu__element[disabled] {
+  color: var(--MAIN_BLACK_20) !important; /* removed lib's style */
+}

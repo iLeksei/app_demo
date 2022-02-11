@@ -51,6 +51,7 @@ export const Menu = (props: IProps): ReactElement => {
         <menu className="menu__container">
             <div className="menu__logo-container">
                 <Link to={"/"} className="menu__logo">
+                    {/* @ts-ignore */}
                     <img alt="logo" src={evrazLogo} className="menu__logo-img"/>
                 </Link>
                 <div className="menu__logo-gradient"/>

@@ -33,19 +33,22 @@ export class AgreementUtils {
 
     static filterAgreements = (agreements: AgreementTableRecord[] | null, filterData: any): AgreementTableRecord[] => {
         if (!agreements) { return [] }
-        if (!filterData?.agreement_name && !filterData?.agreement_author) { return [] }
+        if (!filterData?.agreement_name && !filterData?.agreement_author) { return agreements }
+        const filterAgreementName: string = filterData?.agreement_name?.toLocaleLowerCase() || "";
+        const filterAgreementAuthor: string = filterData?.agreement_author?.toLocaleLowerCase() || "";
         return agreements.filter( agreement => {
-            if (filterData?.agreement_name && filterData?.agreement_author) {
-                return agreement?.agreementName?.toLocaleLowerCase()
-                        ?.includes(filterData.agreement_name.toLocaleLowerCase()) ||
-                    agreement?.agreementAuthor?.toLocaleLowerCase()
-                        ?.includes(filterData.agreement_author.toLocaleLowerCase());
-            } else if (filterData?.agreement_name) {
-                return agreement?.agreementName?.toLocaleLowerCase()
-                        ?.includes(filterData.agreement_name.toLocaleLowerCase());
-            } else if (filterData?.agreement_author) {
-                agreement?.agreementAuthor?.toLocaleLowerCase()
-                    ?.includes(filterData.agreement_author.toLocaleLowerCase());
+            const agreementName: string = agreement?.agreementName?.toLocaleLowerCase() || "";
+            const agreementAuthor: string = agreement?.agreementAuthor?.toLocaleLowerCase() || "";
+
+            if (filterAgreementName && filterAgreementAuthor) {
+                return agreementName?.includes(filterAgreementName) && agreementAuthor?.includes(filterAgreementAuthor);
+                return agreement;
+            } else if (filterAgreementName) {
+                return agreementName?.includes(filterAgreementName);
+                return agreement;
+            } else if (filterAgreementAuthor) {
+                agreementAuthor?.includes(filterAgreementAuthor);
+                return agreement;
             }
         })
     }

@@ -44,8 +44,8 @@ export const Agreements = (props: IProps): ReactElement => {
                 <AgreementsFilter data={filterData} onChange={onFilterChange}/>
                 <AgreementsTable
                     onSelect={onAgreementSelect}
-                    data={agreements}
-                    // data={AgreementUtils.filterAgreements(agreements, filterData)}
+                    // data={agreements}
+                    data={AgreementUtils.filterAgreements(agreements, filterData)}
                     total={agreementsCount}
 
                 />

@@ -3,11 +3,9 @@ import React, {ReactElement} from "react";
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import BootstrapTable from "react-bootstrap-table-next";
 
-import {Agreements} from "../../../entities/Agreements";
 import {AgreementTableRecord} from "../../../entities/AgreementTableRecord";
 
 import "./agreementsTable.scss"
-// import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 interface IProps {
     data: AgreementTableRecord[] | null;

@@ -9,17 +9,6 @@ interface IProps {
 }
 
 export const AgreementsPreview = (props: IProps): ReactElement => {
-    const previewContainer = useRef();
-
-    useEffect(() => {
-        document.addEventListener("resize", onResize)
-
-        return document.removeEventListener("resize", onResize);
-    }, [])
-
-    const onResize = (e: any) => {
-        console.log(e);
-    }
 
     const renderAgreement = () => {
         return !!props.src && !!props.agreement?.agreementId &&
@@ -29,8 +18,8 @@ export const AgreementsPreview = (props: IProps): ReactElement => {
                 name="agreements-preview"
                 title="Просмотр договора"
                 scrolling="yes"
-                src={"https://jsonplaceholder.typicode.com/"} //for test
-                // src={props.src}
+                // src={"https://jsonplaceholder.typicode.com/"} //for test
+                src={props.src}
             />;
     }
 

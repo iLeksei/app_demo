@@ -12,11 +12,7 @@ interface IProps {
 }
 
 export const AgreementsFilter = (props: IProps): ReactElement => {
-    const toProcess = () => {
-    };
-
     const onFilterChange = (e: any) => {
-        console.log(e);
         props.onChange(e?.target?.name, StringUtils.sanitizeString(e?.target?.value || ""));
     }
 

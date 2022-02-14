@@ -55,7 +55,7 @@ export const AgreementsTable = (props: IProps): ReactElement => {
     };
 
     const paginationConfig = {
-        sizePerPage: 15,
+        sizePerPage: 10,
         hideSizePerPage: true,
         hidePageListOnlyOnePage: true,
         totalSize: props.total,

@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 80px;
   }
 
   &__frame-container {
@@ -25,7 +24,6 @@
 
   &__description {
     width: 90%;
-    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +33,7 @@
     width: 100%;
     text-align: center;
     align-self: center;
+    padding-top: 80px;
     h3 {
       color: var(--MAIN_BLACK_60)
     }

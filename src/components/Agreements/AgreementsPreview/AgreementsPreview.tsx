@@ -1,4 +1,4 @@
-import React, {ReactElement, useEffect, useRef} from "react";
+import React, {ReactElement} from "react";
 import {AgreementTableRecord} from "../../../entities/AgreementTableRecord";
 
 import "./agreementsPreview.scss"
@@ -26,7 +26,7 @@ export const AgreementsPreview = (props: IProps): ReactElement => {
     const renderPreviewDescription = (): ReactElement => {
         return (
             !!props.agreement?.agreementId ?
-            <div>{props.agreement?.agreementName}</div> :
+            <div/> :
             <div className="agreements-preview__warning"><h3>Выберете договор</h3></div>
         )
     }

@@ -473,18 +473,18 @@ var AgreementsPreview = function AgreementsPreview(props) {
   };
 
   var renderPreviewDescription = function renderPreviewDescription() {
-    var _props$agreement2, _props$agreement3;
+    var _props$agreement2;
 
-    return !!((_props$agreement2 = props.agreement) !== null && _props$agreement2 !== void 0 && _props$agreement2.agreementId) ? /*#__PURE__*/react.createElement("div", null, (_props$agreement3 = props.agreement) === null || _props$agreement3 === void 0 ? void 0 : _props$agreement3.agreementName) : /*#__PURE__*/react.createElement("div", {
+    return !!((_props$agreement2 = props.agreement) !== null && _props$agreement2 !== void 0 && _props$agreement2.agreementId) ? /*#__PURE__*/react.createElement("div", null) : /*#__PURE__*/react.createElement("div", {
       className: "agreements-preview__warning"
     }, /*#__PURE__*/react.createElement("h3", null, "\u0412\u044B\u0431\u0435\u0440\u0435\u0442\u0435 \u0434\u043E\u0433\u043E\u0432\u043E\u0440"));
   };
 
   var renderAgreementInfo = function renderAgreementInfo() {
-    var _props$agreement4, _props$agreement5, _props$agreement6;
+    var _props$agreement3, _props$agreement4, _props$agreement5;
 
     var NO_AUTHOR_MSG = "Автор не найден";
-    return !!props.src && !!((_props$agreement4 = props.agreement) !== null && _props$agreement4 !== void 0 && _props$agreement4.agreementId) ? /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement("div", null, "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0434\u043E\u0433\u043E\u0432\u043E\u0440\u0430: ", (_props$agreement5 = props.agreement) === null || _props$agreement5 === void 0 ? void 0 : _props$agreement5.agreementName), /*#__PURE__*/react.createElement("div", null, "\u0410\u0432\u0442\u043E\u0440 \u0434\u043E\u0433\u043E\u0432\u043E\u0440\u0430: ", ((_props$agreement6 = props.agreement) === null || _props$agreement6 === void 0 ? void 0 : _props$agreement6.agreementAuthor) || NO_AUTHOR_MSG)) : "";
+    return !!props.src && !!((_props$agreement3 = props.agreement) !== null && _props$agreement3 !== void 0 && _props$agreement3.agreementId) ? /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement("div", null, "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0434\u043E\u0433\u043E\u0432\u043E\u0440\u0430: ", (_props$agreement4 = props.agreement) === null || _props$agreement4 === void 0 ? void 0 : _props$agreement4.agreementName), /*#__PURE__*/react.createElement("div", null, "\u0410\u0432\u0442\u043E\u0440 \u0434\u043E\u0433\u043E\u0432\u043E\u0440\u0430: ", ((_props$agreement5 = props.agreement) === null || _props$agreement5 === void 0 ? void 0 : _props$agreement5.agreementAuthor) || NO_AUTHOR_MSG)) : "";
   };
 
   return /*#__PURE__*/react.createElement("section", {
@@ -638,7 +638,7 @@ var AgreementsTable = function AgreementsTable(props) {
     onSelect: props.onSelect
   };
   var paginationConfig = {
-    sizePerPage: 15,
+    sizePerPage: 10,
     hideSizePerPage: true,
     hidePageListOnlyOnePage: true,
     totalSize: props.total
@@ -1108,7 +1108,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".agreements-filter__container{width:90
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".agreements-preview__wrapper{width:100%;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;padding-top:80px}.agreements-preview__frame-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center}.agreements-preview__frame-container iframe{width:96%;height:100%;overflow:scroll;-webkit-overflow-scrolling:touch}.agreements-preview__description{width:90%;min-height:80px;display:flex;justify-content:center;align-items:center}.agreements-preview__warning{width:100%;text-align:center;align-self:center}.agreements-preview__warning h3{color:var(--MAIN_BLACK_60)}.agreements-preview__agreement-info{width:90%;height:auto}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".agreements-preview__wrapper{width:100%;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column}.agreements-preview__frame-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center}.agreements-preview__frame-container iframe{width:96%;height:100%;overflow:scroll;-webkit-overflow-scrolling:touch}.agreements-preview__description{width:90%;display:flex;justify-content:center;align-items:center}.agreements-preview__warning{width:100%;text-align:center;align-self:center;padding-top:80px}.agreements-preview__warning h3{color:var(--MAIN_BLACK_60)}.agreements-preview__agreement-info{width:90%;height:auto}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

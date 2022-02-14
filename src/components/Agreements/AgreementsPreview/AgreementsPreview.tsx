@@ -18,8 +18,8 @@ export const AgreementsPreview = (props: IProps): ReactElement => {
                 name="agreements-preview"
                 title="Просмотр договора"
                 scrolling="yes"
-                // src={"https://jsonplaceholder.typicode.com/"} //for test
-                src={props.src}
+                src={"https://jsonplaceholder.typicode.com/"} //for test
+                // src={props.src}
             />;
     }
 

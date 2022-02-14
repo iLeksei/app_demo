@@ -2,6 +2,7 @@ import React, {ReactElement} from "react";
 import Nav from "react-bootstrap/Nav";
 import Accordion from "react-bootstrap/Accordion";
 
+
 import {AccordionToggler} from "../AccordionToggler/AccordionToggler";
 
 import "./menu.scss";
@@ -31,7 +32,8 @@ export const Menu = (props: IProps): ReactElement => {
                     menu.map((el, idx) => {
                         return (
                             <Nav.Link
-                                href={el.link}
+                                as={Link}
+                                to={el.link}
                                 key={idx + el.link}
                                 eventKey={el.link}
                                 className="menu__element"
@@ -48,7 +50,7 @@ export const Menu = (props: IProps): ReactElement => {
 
     //todo it's possible to split
     return (
-        <menu className="menu__container">
+        <menu className="menu__container" >
             <div className="menu__logo-container">
                 <Link to={"/"} className="menu__logo">
                     {/* @ts-ignore */}

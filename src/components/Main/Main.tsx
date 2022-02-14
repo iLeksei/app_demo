@@ -12,7 +12,7 @@ export const Main = (props: IProps): ReactElement => {
         <main className="main__container">
             <Routes>
                 <Route path="/" element={<></>}/>
-                <Route path="Agreements" element={<Agreements/>}/>
+                <Route path="/Agreements" element={<Agreements/>}/>
             </Routes>
         </main>
     );

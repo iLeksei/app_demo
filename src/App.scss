@@ -6,8 +6,15 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    //overflow: hidden;
   }
 
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .burger-menu-icon {
@@ -17,7 +24,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  animation: showMenuIcon 0.7s ease-in;
+  animation: showMenuIcon 1s ease-in;
   &:hover {
     cursor: pointer;
   }
@@ -80,7 +87,7 @@
 .bm-cross-button {
   height: 24px;
   width: 24px;
-  right: -34px !important;
+  right: -25px !important;
 }
 
 /* Color/shape of close button cross */

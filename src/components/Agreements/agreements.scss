@@ -25,15 +25,16 @@
 
   &__preview-container {
     width: 50%;
-    min-width: var(--CONTENT_MIN_WIDTH);
+    //max-width: 100%;
+    //min-width: var(--CONTENT_MIN_WIDTH);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
-    @media screen and (min-width: 1700px) {
-      width: 65%;
-    }
+    //@media screen and (min-width: 1700px) {
+    //  width: 65%;
+    //}
   }
 
 

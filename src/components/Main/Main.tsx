@@ -10,9 +10,8 @@ interface IProps {
 
 export const Main = (props: IProps): ReactElement => {
     let menuStateCtx = useContext(MenuStateCtx);
-    console.log(menuStateCtx)
     return (
-        <main className={`main__container ${menuStateCtx.isOpen ? "main-reduced" : ""}`}>
+        <main className={`main__container ${menuStateCtx?.isOpen ? "main-reduced" : ""}`}>
             <Routes>
                 <Route path="/" element={<></>}/>
                 <Route path="/Agreements" element={<Agreements/>}/>

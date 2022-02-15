@@ -3,30 +3,5 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  //max-width: 100%;
-  //min-width: 88%;
   height: 100%;
-  //overflow: auto;
-  //@media screen and (min-width: 1280px) {
-  //  width: 92%;
-  //}
-  &-reduced {
-    //animation: reduceWidth 0.1s ease-in;
-    //width: 90% !important;
-  }
-}
-
-.clearfix {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@keyframes reduceWidth {
-  0% {
-    width: 100% !important;
-  }
-  100% {
-    width: 89% !important;
-  }
 }

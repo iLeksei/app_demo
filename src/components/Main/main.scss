@@ -1,22 +1,11 @@
 .main {
   &__container {
-    //height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
     transition: width 0.2s ease-in;
-  }
-  &__menu-container {
-    width: var(--MENU_WIDTH);
-    min-width: var(--MENU_MIN_WIDTH);
-    height: 100%;
-  }
-
-  &__content-container {
-    width: var(--CONTENT_WIDTH);
-    height: 100%;
   }
 }
 

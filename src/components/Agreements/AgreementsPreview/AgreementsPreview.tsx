@@ -27,7 +27,7 @@ export const AgreementsPreview = (props: IProps): ReactElement => {
         return (
             !!props.agreement?.agreementId ?
             <div/> :
-            <div className="agreements-preview__warning"><h3>Выберете договор</h3></div>
+            <div className="agreements-preview__warning"><h3>Выберите договор</h3></div>
         )
     }
 

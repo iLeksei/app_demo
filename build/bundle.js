@@ -480,7 +480,7 @@ var AgreementsPreview = function AgreementsPreview(props) {
 
     return !!((_props$agreement2 = props.agreement) !== null && _props$agreement2 !== void 0 && _props$agreement2.agreementId) ? /*#__PURE__*/react.createElement("div", null) : /*#__PURE__*/react.createElement("div", {
       className: "agreements-preview__warning"
-    }, /*#__PURE__*/react.createElement("h3", null, "\u0412\u044B\u0431\u0435\u0440\u0435\u0442\u0435 \u0434\u043E\u0433\u043E\u0432\u043E\u0440"));
+    }, /*#__PURE__*/react.createElement("h3", null, "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0434\u043E\u0433\u043E\u0432\u043E\u0440"));
   };
 
   var renderAgreementInfo = function renderAgreementInfo() {
@@ -1174,7 +1174,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".accordion-toggler__container{display:
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".agreements-filter__container{width:90%;min-height:80px;display:flex;justify-content:center;align-items:center;flex-direction:row;padding:20px 0}.agreements-filter__to-process-btn{min-width:120px}.agreements-filter__filter-element{margin-right:5px !important;width:20%;min-width:200px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".agreements-filter__container{width:100%;min-height:80px;display:flex;justify-content:center;align-items:center;flex-direction:row;padding:20px 0}.agreements-filter__to-process-btn{min-width:120px}.agreements-filter__filter-element{margin-right:5px !important;width:20%;min-width:200px}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1284,7 +1284,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".burger-menu__container{display:flex;h
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".content__container{display:flex;justify-content:flex-start;align-items:flex-start;flex-direction:column;height:100%}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".content__container{display:flex;justify-content:flex-start;align-items:flex-start;flex-direction:column;height:100%;width:100%}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1306,7 +1306,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".content__container{display:flex;justi
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header__container{display:flex;flex-direction:row;justify-content:center;align-items:center;width:100%;height:10%;min-height:80px;padding:0;border-bottom:1px solid var(--MAIN_BLACK_5)}.header__form-container{width:var(--CONTENT_WIDTH);display:flex;flex-direction:row;justify-content:center;align-items:center;padding:0 20%}.header__docs-input{padding-right:10px;width:50%}.header__docs-input:hover{cursor:pointer}.header__find-btn{margin:0 !important;border-color:var(--MAIN_BLACK_20) !important}.input-group-text{background:var(--MAIN_WHITE) !important;border-left:none !important}div.header__docs-input.input-group{margin:0 !important}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header__container{display:flex;flex-direction:row;justify-content:flex-start;align-items:center;width:100%;height:10%;min-height:80px;padding:0;border-bottom:1px solid var(--MAIN_BLACK_5)}.header__form-container{width:var(--CONTENT_WIDTH);display:flex;flex-direction:row;justify-content:flex-start;align-items:center;padding:0 20% 0 20%}.header__docs-input{padding-right:10px;width:50%}.header__docs-input:hover{cursor:pointer}.header__find-btn{margin:0 !important;border-color:var(--MAIN_BLACK_20) !important}.input-group-text{background:var(--MAIN_WHITE) !important;border-left:none !important}div.header__docs-input.input-group{margin:0 !important}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
